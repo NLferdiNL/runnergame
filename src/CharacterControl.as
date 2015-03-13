@@ -11,7 +11,7 @@ package
 	public class CharacterControl extends Body
 	{
 		public var gravity:int = 0; //variable that will be used to store the down- or upwards force applied to the body
-		public var ceiling:int = 100; //0 for now, might be changed during play later on
+		public var ceiling:int = 0; //0 for now, might be changed during play later on
 		public var floor:int = 600; //stage size for now, might be useful and due to change duing play later on
 		public var state:Boolean = false; //false = gravity down, true = gravity up
 		public var touchingground = false;
