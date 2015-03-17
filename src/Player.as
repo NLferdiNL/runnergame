@@ -19,12 +19,12 @@ package
 		}
 		
 		public function keyPress(event:KeyboardEvent):void {
-			if (event.charCode == 32/*&& touchingground == true*/) { //uncomment the &&.. in the if condition to make you only able
-				if (state == false) {//switch gravity when on the ground, upwards gravity doesn't work fully yet so keep it off
-					state = true;
+			if (event.charCode == 32 && touchingGround == true) { //uncomment the &&.. in the if condition to make you only able
+				if (normalGravity == false) {//switch gravity when on the ground, upwards gravity doesn't work fully yet so keep it off
+					normalGravity = true;
 					gravity = 0; //this is here until gravity towards the ceiling is fixed, same goes for the one in the else section
 				} else {
-					state = false;
+					normalGravity = false;
 					gravity = 0;
 				}
 			}

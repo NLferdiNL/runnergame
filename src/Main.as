@@ -2,6 +2,7 @@ package
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import flash.geom.ColorTransform;
 	
 	/**
 	 * ...
@@ -19,6 +20,12 @@ package
 			addChild(player);
 			stage.addEventListener(Event.ENTER_FRAME, player.GravityControl);
 			//For now it'll have to work like this. Will work on a better way.
+			
+			/*
+			var body:Body = new Body;
+			body.y = 0 + this.height / 2;
+			addChild(body);
+			*/
 		}
 		
 	}
