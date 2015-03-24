@@ -11,8 +11,10 @@ package gameobjects {
 	public class CharacterControl extends Body
 	{
 		public var gravity:int = 0; //variable that will be used to store the down- or upwards force applied to the body
-		public var ceiling:int = 100; //0 for now, might be changed during play later on
+		public var ceiling:int = 100; //100 for now, might be changed during play later on
+		private var defaultCeiling:int = 100; //this is the default value of ceiling
 		public var floor:int = 590; //stage size for now, might be useful and due to change duing play later on
+		private var defaultFloor:int = 590; //this is the default value of floor
 		public var touchingGround:Boolean = false; //Is the body touching the ground, used by the player or ai to make sure they cant switch mid-air
 		protected var normalGravity:Boolean = true; //false = gravity down, true = gravity up
 		
@@ -21,6 +23,11 @@ package gameobjects {
 		public function GravityControl(event:Event):void
 		{
 			var bodyPosition:Number = this.y + this.height / 2;
+			
+			if (this.y < defaultCeiling || this.y > defaultFloor)
+			{
+				//death by falling occured
+			}
 			
 			this.y += gravity;
 			if (normalGravity && bodyPosition < floor) {
