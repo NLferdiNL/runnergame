@@ -1,5 +1,4 @@
-package  
-{
+package gamecontrol {
 	/**
 	 * ...
 	 * @author Ferdi Alleman

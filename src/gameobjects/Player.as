@@ -1,7 +1,7 @@
-package  
-{	
+package gameobjects {	
 	import flash.events.Event;
 	import flash.events.KeyboardEvent;
+	import gameobjects.CharacterControl;
 	/**
 	 * ...
 	 * @author Ferdi Alleman
@@ -22,7 +22,7 @@ package
 			if (event.charCode == 32 && touchingGround == true) { //uncomment the &&.. in the if condition to make you only able
 				if (normalGravity == false) {//switch gravity when on the ground, upwards gravity doesn't work fully yet so keep it off
 					normalGravity = true;
-					gravity = 0; //this is here until gravity towards the ceiling is fixed, same goes for the one in the else section
+					gravity = 0; //this will make it so you wont be able to swing the character if gravity wasn't set to 0 in charactercontrol
 				} else {
 					normalGravity = false;
 					gravity = 0;

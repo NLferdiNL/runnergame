@@ -1,7 +1,7 @@
-package  
-{
+package gameobjects {
 	import flash.events.Event;
 	import flash.events.KeyboardEvent;
+	import gameobjects.Body;
 	
 	/**
 	 * ...
@@ -13,8 +13,8 @@ package
 		public var gravity:int = 0; //variable that will be used to store the down- or upwards force applied to the body
 		public var ceiling:int = 100; //0 for now, might be changed during play later on
 		public var floor:int = 590; //stage size for now, might be useful and due to change duing play later on
+		public var touchingGround:Boolean = false; //Is the body touching the ground, used by the player or ai to make sure they cant switch mid-air
 		protected var normalGravity:Boolean = true; //false = gravity down, true = gravity up
-		public var touchingGround = false; //variable accessed by classes extending to prevent gravity change in mid air
 		
 		public function CharacterControl(){}
 		
@@ -40,7 +40,7 @@ package
 				//normalGravity == true, check if on the ceiling				
 				gravity = 0;
 				touchingGround = true;
-			} 
+			}
 			if(normalGravity){changeColor(0xff0000)}else{changeColor(0x00ff00)}
 		}
 	}

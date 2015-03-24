@@ -1,5 +1,4 @@
-package  
-{
+package gameobjects {
 	import flash.display.MovieClip;
 	import flash.geom.ColorTransform;
 	/**

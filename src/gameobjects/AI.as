@@ -1,5 +1,5 @@
-package  
-{
+import gameobjects.CharacterControl;
+package gameobjects sss GameObjects {
 	/**
 	 * ...
 	 * @author Ferdi Alleman
