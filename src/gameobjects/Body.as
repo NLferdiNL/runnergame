@@ -8,13 +8,15 @@ package gameobjects {
 	public class Body extends MovieClip
 	{
 		
-		public function Body() 
+		public function Body(X:int = 0,Y:int = 0,Width:int = 50,Height:int = 50) 
 		{
 			
 			//Render the character and let control take care of gravity and death situations
 			this.graphics.beginFill(0, 1);
 			this.graphics.drawCircle(0, 0, 25);
 			this.graphics.endFill();
+			this.x = X;
+			this.y = Y;
 		}
 		
 		protected function changeColor(c:uint):void
